@@ -21,9 +21,9 @@
 # Modify as required.
 #
 SUFFIX := $(shell uname -m | sed -e 's/^unknown/$//' -e 's/^i.86/$//' -e 's/^x86_64/$/64/')
-PREFIX ?= /usr/local
+PREFIX ?= /usr
 INCDIR ?= $(PREFIX)/include
-LIBDIR ?= $(PREFIX)/lib$(SUFFIX)
+LIBDIR ?= $(PREFIX)/lib64
 
 
 MAJVERS = 4
@@ -33,7 +33,7 @@ VERSION = $(MAJVERS).$(MINVERS)
 
 CPPFLAGS += -I. -D_REENTRANT -D_POSIX_PTHREAD_SEMANTICS
 CPPFLAGS += -DENABLE_VECTOR_MODE 
-CXXFLAGS += -fPIC -Wall -ffast-math -funroll-loops -O2
+CXXFLAGS += -fPIC -Wall -ffast-math -funroll-loops
 CXXFLAGS += -march=native
 LDLFAGS += 
 LDLIBS +=
