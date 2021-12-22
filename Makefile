@@ -42,7 +42,7 @@ LDLIBS +=
 ZITA-CONVOLVER_SO = libzita-convolver.so
 ZITA-CONVOLVER_MAJ = $(ZITA-CONVOLVER_SO).$(MAJVERS)
 ZITA-CONVOLVER_MIN = $(ZITA-CONVOLVER_MAJ).$(MINVERS)
-ZITA-CONVOLVER_DEP = -lfftw3f -lpthread
+ZITA-CONVOLVER_DEP = /usr/lib64/libfftw3f.a -lpthread -pthread
 ZITA-CONVOLVER_O = zita-convolver.o
 ZITA-CONVOLVER_H = zita-convolver.h 
 
